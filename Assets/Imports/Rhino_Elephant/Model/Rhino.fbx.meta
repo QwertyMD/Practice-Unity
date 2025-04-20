@@ -1,0 +1,644 @@
+fileFormatVersion: 2
+guid: bb2ec9a592904ef40856e8ea024fb91d
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: joint1
+  - first:
+      1: 100002
+    second: joint10
+  - first:
+      1: 100004
+    second: joint11
+  - first:
+      1: 100006
+    second: joint12
+  - first:
+      1: 100008
+    second: joint13
+  - first:
+      1: 100010
+    second: joint14
+  - first:
+      1: 100012
+    second: joint15
+  - first:
+      1: 100014
+    second: joint16
+  - first:
+      1: 100016
+    second: joint17
+  - first:
+      1: 100018
+    second: joint18
+  - first:
+      1: 100020
+    second: joint19
+  - first:
+      1: 100022
+    second: joint2
+  - first:
+      1: 100024
+    second: joint2 1
+  - first:
+      1: 100026
+    second: joint20
+  - first:
+      1: 100028
+    second: joint21
+  - first:
+      1: 100030
+    second: joint22
+  - first:
+      1: 100032
+    second: joint23
+  - first:
+      1: 100034
+    second: joint24
+  - first:
+      1: 100036
+    second: joint25
+  - first:
+      1: 100038
+    second: joint26
+  - first:
+      1: 100040
+    second: joint27
+  - first:
+      1: 100042
+    second: joint28
+  - first:
+      1: 100044
+    second: joint3
+  - first:
+      1: 100046
+    second: joint3 1
+  - first:
+      1: 100048
+    second: joint4
+  - first:
+      1: 100050
+    second: joint4 1
+  - first:
+      1: 100052
+    second: joint6
+  - first:
+      1: 100054
+    second: joint7
+  - first:
+      1: 100056
+    second: joint8
+  - first:
+      1: 100058
+    second: joint9
+  - first:
+      1: 100060
+    second: nurbsCircle6
+  - first:
+      1: 100062
+    second: polySurface10
+  - first:
+      1: 100064
+    second: polySurface3
+  - first:
+      1: 100066
+    second: polySurface5
+  - first:
+      1: 100068
+    second: Rino
+  - first:
+      1: 100070
+    second: //RootNode
+  - first:
+      4: 400000
+    second: joint1
+  - first:
+      4: 400002
+    second: joint10
+  - first:
+      4: 400004
+    second: joint11
+  - first:
+      4: 400006
+    second: joint12
+  - first:
+      4: 400008
+    second: joint13
+  - first:
+      4: 400010
+    second: joint14
+  - first:
+      4: 400012
+    second: joint15
+  - first:
+      4: 400014
+    second: joint16
+  - first:
+      4: 400016
+    second: joint17
+  - first:
+      4: 400018
+    second: joint18
+  - first:
+      4: 400020
+    second: joint19
+  - first:
+      4: 400022
+    second: joint2
+  - first:
+      4: 400024
+    second: joint2 1
+  - first:
+      4: 400026
+    second: joint20
+  - first:
+      4: 400028
+    second: joint21
+  - first:
+      4: 400030
+    second: joint22
+  - first:
+      4: 400032
+    second: joint23
+  - first:
+      4: 400034
+    second: joint24
+  - first:
+      4: 400036
+    second: joint25
+  - first:
+      4: 400038
+    second: joint26
+  - first:
+      4: 400040
+    second: joint27
+  - first:
+      4: 400042
+    second: joint28
+  - first:
+      4: 400044
+    second: joint3
+  - first:
+      4: 400046
+    second: joint3 1
+  - first:
+      4: 400048
+    second: joint4
+  - first:
+      4: 400050
+    second: joint4 1
+  - first:
+      4: 400052
+    second: joint6
+  - first:
+      4: 400054
+    second: joint7
+  - first:
+      4: 400056
+    second: joint8
+  - first:
+      4: 400058
+    second: joint9
+  - first:
+      4: 400060
+    second: nurbsCircle6
+  - first:
+      4: 400062
+    second: polySurface10
+  - first:
+      4: 400064
+    second: polySurface3
+  - first:
+      4: 400066
+    second: polySurface5
+  - first:
+      4: 400068
+    second: //RootNode
+  - first:
+      4: 400070
+    second: Rino
+  - first:
+      23: 2300000
+    second: polySurface10
+  - first:
+      23: 2300002
+    second: polySurface5
+  - first:
+      33: 3300000
+    second: polySurface10
+  - first:
+      33: 3300002
+    second: polySurface5
+  - first:
+      43: 4300000
+    second: polySurface3
+  - first:
+      43: 4300002
+    second: Rino
+  - first:
+      43: 4300004
+    second: polySurface5
+  - first:
+      43: 4300006
+    second: polySurface10
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: polySurface3
+  - first:
+      137: 13700002
+    second: Rino
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: nurbsCircle6
+        weight: 1
+      - path: nurbsCircle6/joint20
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint1
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint1/joint2
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint1/joint2/joint3
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint1/joint2/joint3/joint4
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint15
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint15/joint16
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint15/joint16/joint17
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint21
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint21/joint22
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint21/joint22/joint23
+        weight: 1
+      - path: nurbsCircle6/joint20/joint6/joint7/joint8/joint21/joint22/joint23/joint24
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint12
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint12/joint2 1
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint12/joint2 1/joint3
+          1
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint12/joint2 1/joint3
+          1/joint4 1
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint13
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint13/joint14
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint13/polySurface5
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint13/polySurface10
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint25
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint25/joint26
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint25/joint26/joint27
+        weight: 1
+      - path: nurbsCircle6/joint20/joint9/joint10/joint11/joint25/joint26/joint27/joint28
+        weight: 1
+      - path: polySurface3
+        weight: 1
+      - path: Rino
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Rhino(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface3
+      parentName: Rhino(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rino
+      parentName: Rhino(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nurbsCircle6
+      parentName: Rhino(Clone)
+      position: {x: -0, y: 0.027507257, z: 0.0027623752}
+      rotation: {x: 0.04709406, y: -0, z: -0, w: 0.99889046}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint20
+      parentName: nurbsCircle6
+      position: {x: -0, y: -0.03506053, z: 0.0019920242}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint6
+      parentName: joint20
+      position: {x: 4.814825e-34, y: -0.00065643096, z: -0.00022620184}
+      rotation: {x: 0.0066603296, y: -0.7070754, z: -0.0066603296, w: 0.7070754}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint7
+      parentName: joint6
+      position: {x: -0.012437864, y: -0.0004899324, z: 3.254223e-18}
+      rotation: {x: -0.000000008381904, y: -0, z: -0.50803155, w: 0.8613385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint8
+      parentName: joint7
+      position: {x: -0.011500197, y: -0.0005932199, z: 2.0508312e-18}
+      rotation: {x: 0.48228154, y: 0.829758, z: 0.051115666, w: 0.2762128}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint21
+      parentName: joint8
+      position: {x: 0.011582916, y: -0.012887716, z: -0.002868267}
+      rotation: {x: 0.6083371, y: -0.49075708, z: 0.61291975, w: -0.115813784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint22
+      parentName: joint21
+      position: {x: 0.024134729, y: -0.000679614, z: -0.002237395}
+      rotation: {x: 0.8460927, y: 0.5322335, z: -0.006851518, w: -0.028419945}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint23
+      parentName: joint22
+      position: {x: 0.0079685105, y: 0.00012862496, z: 0.0007192049}
+      rotation: {x: 0.7941603, y: 0.60518515, z: -0.030653914, w: -0.04605058}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint24
+      parentName: joint23
+      position: {x: 0.0098095685, y: -0.0007528748, z: -0.0007991003}
+      rotation: {x: 0, y: 0, z: 0.07441087, w: 0.99722767}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint1
+      parentName: joint8
+      position: {x: -0.017563678, y: 5.5511148e-18, z: 0}
+      rotation: {x: 0.22168079, y: 0.7402797, z: 0.24869967, w: 0.5839454}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint2
+      parentName: joint1
+      position: {x: -0.024134725, y: 0.0006796019, z: 0.0022374005}
+      rotation: {x: 0.9924704, y: -0.09831716, z: -0.05762393, w: 0.044898238}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint3
+      parentName: joint2
+      position: {x: -0.007968495, y: -0.00012864084, z: -0.00071916444}
+      rotation: {x: 0.99929434, y: 0.0130337635, z: 0.006536365, w: -0.034615964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint4
+      parentName: joint3
+      position: {x: -0.0098095825, y: 0.0007529086, z: 0.0007990717}
+      rotation: {x: 0, y: 0, z: 0.07441087, w: 0.99722767}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint15
+      parentName: joint8
+      position: {x: -0.00056802237, y: 0.002767497, z: -0.018207032}
+      rotation: {x: -0.23908989, y: -0.48017308, z: -0.18492752, w: 0.82345104}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint16
+      parentName: joint15
+      position: {x: -0.009013575, y: 8.881784e-18, z: -1.1883405e-18}
+      rotation: {x: -0.002481132, y: 0.054118503, z: -0.09464451, w: 0.99403596}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint17
+      parentName: joint16
+      position: {x: -0.007236714, y: -8.881784e-18, z: -2.1781878e-18}
+      rotation: {x: 0.9998214, y: 0.0154263545, z: -0.010740921, w: 0.0019509383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint18
+      parentName: joint17
+      position: {x: -0.0069665182, y: -0.00021354301, z: 2.1945588e-18}
+      rotation: {x: 0.99972916, y: 0.023272594, z: -2.5378912e-17, w: 6.1839725e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint19
+      parentName: joint18
+      position: {x: -0.0067049917, y: -0.00016806569, z: -2.1821329e-18}
+      rotation: {x: 0.49343744, y: 0.5064776, z: -0.49343744, w: 0.5064776}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint9
+      parentName: joint20
+      position: {x: -0, y: -0.0006486063, z: 0.00038419318}
+      rotation: {x: 0.008759387, y: 0.7070525, z: 0.008759387, w: 0.7070525}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint10
+      parentName: joint9
+      position: {x: -0.015422455, y: 0.003627231, z: 0}
+      rotation: {x: -0.40301692, y: 0.027022481, z: 0.20986587, w: 0.89039516}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint11
+      parentName: joint10
+      position: {x: -0.015560118, y: 0.002884682, z: -1.9293172e-19}
+      rotation: {x: -0.03563367, y: -0.727112, z: 0.15365596, w: 0.66815287}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint25
+      parentName: joint11
+      position: {x: 0.018781379, y: -0.017656624, z: -0.0013553072}
+      rotation: {x: -0.36607507, y: 0.61415166, z: -0.5122504, w: 0.47582167}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint26
+      parentName: joint25
+      position: {x: 0.026827719, y: 0.009389694, z: -0.0022373903}
+      rotation: {x: 0.93904656, y: -0.34034172, z: -0.033002064, w: 0.03563603}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint27
+      parentName: joint26
+      position: {x: 0.008253226, y: 0.0033223247, z: 0.0007192202}
+      rotation: {x: 0.9946969, y: 0.0928956, z: -0.028885093, w: -0.033377994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint28
+      parentName: joint27
+      position: {x: 0.010929774, y: -0.001008271, z: -0.0007990972}
+      rotation: {x: 0, y: 0, z: 0.07441087, w: 0.99722767}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint12
+      parentName: joint11
+      position: {x: -0.02523851, y: -0.0052360445, z: 0.0013904221}
+      rotation: {x: 0.7992316, y: 0.31931865, z: -0.12162857, w: 0.4944401}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint2 1
+      parentName: joint12
+      position: {x: -0.026827686, y: -0.009389684, z: 0.0022374005}
+      rotation: {x: 0.8958695, y: -0.13280165, z: 0.21835263, w: 0.3634609}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint3 1
+      parentName: joint2 1
+      position: {x: -0.008253231, y: -0.0033223045, z: -0.0007191645}
+      rotation: {x: 0.9508083, y: -0.29193434, z: 0.0962256, w: 0.038452838}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint4 1
+      parentName: joint3 1
+      position: {x: -0.010929824, y: 0.0010083135, z: 0.0007990717}
+      rotation: {x: 0, y: 0, z: 0.07441087, w: 0.99722767}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint13
+      parentName: joint11
+      position: {x: -0.00038069813, y: -0.005424002, z: 0.018432569}
+      rotation: {x: 0.19834647, y: 0.7004429, z: 0.0006440861, w: 0.6855932}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint14
+      parentName: joint13
+      position: {x: -0.065416075, y: -2.220446e-18, z: -1.0440049e-17}
+      rotation: {x: -0.10365468, y: -0.6994682, z: -0.10365468, w: 0.6994682}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface5
+      parentName: joint13
+      position: {x: -0.05020182, y: 0.013599605, z: 0.0000000011920929}
+      rotation: {x: -0.102005474, y: -0.6997106, z: -0.102005474, w: 0.6997106}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface10
+      parentName: joint13
+      position: {x: -0.018776478, y: 0.002889459, z: 0.0000000011920929}
+      rotation: {x: 0.025973659, y: -0.7066296, z: 0.025973659, w: 0.7066296}
+      scale: {x: 1, y: 0.72677064, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Rino
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
