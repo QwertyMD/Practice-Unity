@@ -8,6 +8,8 @@ public class FishMovement : MonoBehaviour
     public float waterLevel = 0f;     // Y position of the water
     public float jumpHeight = 2f;     // How high the fish jumps
     public float jumpDuration = 1f;   // How long the jump takes
+    public AudioClip jumpSound;       // The sound to play when the fish jumps
+    private const float SOUND_DISTANCE_THRESHOLD = 30f; // Fixed distance for sound to play
 
     private float jumpIntervalMin = 3f; // Minimum time between jumps (seconds)
     private float jumpIntervalMax = 7f; // Maximum time between jumps (seconds)
@@ -18,12 +20,13 @@ public class FishMovement : MonoBehaviour
     private float timeSinceLastJump = 0f; // Track time for jumping
     private float jumpTimer = 0f;     // Track progress of the jump
     private bool isJumping = false;   // Is the fish currently jumping?
+    private AudioSource audioSource;  // To play the jump sound
+    private GameObject player;        // Reference to the player
 
     void Start()
     {
         // Use the fish's initial position as the center of the rectangle
         centerPosition = transform.position;
-        // Set the initial Y position to the water level
         centerPosition.y = waterLevel;
         transform.position = centerPosition;
 
@@ -32,6 +35,22 @@ public class FishMovement : MonoBehaviour
 
         // Pick the first random target to swim to
         PickNewTarget();
+
+        // Add an AudioSource component to this fish if it doesn't have one
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.clip = jumpSound;
+        audioSource.playOnAwake = false;
+
+        // Find the player by tag
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("Player not found! Ensure the player object has the 'Player' tag.");
+        }
     }
 
     void Update()
@@ -55,7 +74,7 @@ public class FishMovement : MonoBehaviour
         Vector3 direction = (targetPosition - transform.position).normalized;
         if (direction != Vector3.zero)
         {
-            Vector3 lookDirection = new Vector3(direction.x, 0, direction.z); // Ignore Y for rotation
+            Vector3 lookDirection = new Vector3(direction.x, 0, direction.z);
             transform.rotation = Quaternion.LookRotation(lookDirection);
         }
 
@@ -68,7 +87,6 @@ public class FishMovement : MonoBehaviour
 
     void PickNewTarget()
     {
-        // Pick a random point within the rectangle
         float randomX = centerPosition.x + Random.Range(-rectangleWidth / 2f, rectangleWidth / 2f);
         float randomZ = centerPosition.z + Random.Range(-rectangleHeight / 2f, rectangleHeight / 2f);
         targetPosition = new Vector3(randomX, waterLevel, randomZ);
@@ -82,13 +100,22 @@ public class FishMovement : MonoBehaviour
             isJumping = true;
             jumpTimer = 0f;
             timeSinceLastJump = 0f;
+
+            // Play the jump sound if the player is close enough
+            if (audioSource != null && jumpSound != null && player != null)
+            {
+                float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+                if (distanceToPlayer <= SOUND_DISTANCE_THRESHOLD)
+                {
+                    audioSource.Play();
+                }
+            }
         }
 
         // If jumping, update the Y position
         if (isJumping)
         {
             jumpTimer += Time.deltaTime / jumpDuration;
-            // Use a sine wave to create a smooth jump arc
             float height = Mathf.Sin(jumpTimer * Mathf.PI) * jumpHeight;
             Vector3 currentPos = transform.position;
             transform.position = new Vector3(currentPos.x, waterLevel + height, currentPos.z);
