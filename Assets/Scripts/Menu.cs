@@ -21,6 +21,11 @@ public class MainMenuController : MonoBehaviour
         Cursor.visible = false;
         SceneManager.LoadScene("Zoo"); // Replace with your Zoo scene name
     }
+    
+    public void PlayQuiz()
+    {
+        SceneManager.LoadScene("Quiz");
+    }
 
     public void ShowAbout()
     {
