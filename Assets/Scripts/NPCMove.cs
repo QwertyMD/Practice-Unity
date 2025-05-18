@@ -2,62 +2,45 @@ using UnityEngine;
 
 public class NPCMovement : MonoBehaviour
 {
-    public Transform path;            // The path GameObject (a cube representing the footpath)
-    public float speed = 2f;          // Speed of the NPC
-    public float waypointSpacing = 2f; // Distance between generated waypoints
+    public Transform path;
+    public float speed = 2f;
+    public float waypointSpacing = 2f;
 
-    private Vector3[] waypoints;      // Array of generated waypoints along the path
-    private int currentWaypointIndex = 0; // Current waypoint the NPC is moving toward
-    private Animator animator;        // Reference to the Animator component
+    private Vector3[] waypoints;
+    private int currentWaypointIndex = 0;
+    private Animator animator;
+    private bool isMoving = true;
+    private float groundY;
 
     void Start()
     {
-        // Get the Animator component
         animator = GetComponent<Animator>();
-        if (animator == null)
-        {
-            Debug.LogError("Animator not found on " + gameObject.name + "! Please add an Animator component.");
-        }
 
-        // Set the walking animation parameter (if applicable)
-        if (animator != null)
-        {
-            // Example: Set a bool parameter "IsWalking" to true
-            // Adjust this based on your Animator setup
-            animator.SetBool("IsWalking", true);
-        }
-
-        // Check if path is assigned
         if (path == null)
         {
-            Debug.LogError("Path not assigned on " + gameObject.name + "! Please assign a path in the Inspector.");
             return;
         }
 
-        // Generate waypoints along the path
         waypoints = GenerateWaypointsAlongPath(path);
 
-        // Ensure there are waypoints to follow
         if (waypoints.Length == 0)
         {
-            Debug.LogError("No waypoints generated for " + gameObject.name + "!");
             return;
         }
 
-        // Start at the first waypoint
-        transform.position = waypoints[0];
+        groundY = waypoints[0].y;
+        transform.position = new Vector3(waypoints[0].x, groundY, waypoints[0].z);
     }
 
     void Update()
     {
-        // If no waypoints, do nothing
-        if (waypoints == null || waypoints.Length == 0) return;
+        if (waypoints == null || waypoints.Length == 0 || !isMoving) return;
 
-        // Move toward the current waypoint
         Vector3 targetWaypoint = waypoints[currentWaypointIndex];
-        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+        Vector3 newPosition = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+        newPosition.y = groundY;
+        transform.position = newPosition;
 
-        // Look toward the target (only on X-Z plane)
         Vector3 direction = (targetWaypoint - transform.position).normalized;
         if (direction != Vector3.zero)
         {
@@ -65,60 +48,61 @@ public class NPCMovement : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(lookDirection);
         }
 
-        // If close to the current waypoint, move to the next one
-        if (Vector3.Distance(transform.position, targetWaypoint) < 0.1f)
+        if (Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(targetWaypoint.x, 0, targetWaypoint.z)) < 0.1f)
         {
-            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length; // Loop back to the first waypoint
+            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
         }
     }
 
     Vector3[] GenerateWaypointsAlongPath(Transform pathTransform)
     {
-        // Get the path's scale, position, and rotation
         Vector3 pathPosition = pathTransform.position;
         Vector3 pathScale = pathTransform.localScale;
         Quaternion pathRotation = pathTransform.rotation;
 
-        // Determine the longest axis (X or Z) in local space
         float length;
         Vector3 localAxis;
         if (pathScale.x > pathScale.z)
         {
             length = pathScale.x;
-            localAxis = Vector3.right; // X-axis in local space
+            localAxis = Vector3.right;
         }
         else
         {
             length = pathScale.z;
-            localAxis = Vector3.forward; // Z-axis in local space
+            localAxis = Vector3.forward;
         }
 
-        // Calculate the number of waypoints
         int waypointCount = Mathf.Max(2, Mathf.CeilToInt(length / waypointSpacing));
         Vector3[] generatedWaypoints = new Vector3[waypointCount];
 
-        // Generate waypoints along the path in local space, then transform to world space
         float startOffset = -length / 2f;
         for (int i = 0; i < waypointCount; i++)
         {
-            float t = (float)i / (waypointCount - 1); // Normalized position (0 to 1)
+            float t = (float)i / (waypointCount - 1);
             float offset = startOffset + (t * length);
-            // Calculate the waypoint position in local space
             Vector3 localWaypointPosition = localAxis * offset;
-            // Transform to world space using the path's rotation and position
             Vector3 worldWaypointPosition = pathPosition + (pathRotation * localWaypointPosition);
-            // Ensure the waypoint is at the correct Y position (ground level)
             worldWaypointPosition.y = pathPosition.y;
             generatedWaypoints[i] = worldWaypointPosition;
-
-            // Debug log to verify waypoint positions
-            Debug.Log("Waypoint " + i + " for " + gameObject.name + ": " + generatedWaypoints[i]);
         }
 
         return generatedWaypoints;
     }
 
-    // Visualize waypoints in the Scene view for debugging
+    public void SetMoving(bool moving)
+    {
+        isMoving = moving;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", moving);
+        }
+
+        Vector3 pos = transform.position;
+        pos.y = groundY;
+        transform.position = pos;
+    }
+
     void OnDrawGizmos()
     {
         if (waypoints == null || waypoints.Length == 0) return;
@@ -131,7 +115,6 @@ public class NPCMovement : MonoBehaviour
                 Gizmos.DrawLine(waypoints[i], waypoints[i + 1]);
             }
         }
-        // Draw a line from the last waypoint to the first to show the loop
         if (waypoints.Length > 1)
         {
             Gizmos.DrawLine(waypoints[waypoints.Length - 1], waypoints[0]);

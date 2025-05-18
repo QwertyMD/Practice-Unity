@@ -3,10 +3,10 @@ using UnityEngine;
 public class AutomaticDoor : MonoBehaviour
 {
     [Header("Settings")]
-    public Transform player; // Drag your character here
-    public float openDistance = 3f; // Distance to trigger opening
-    public float openAngle = 90f; // How much the door opens (in degrees)
-    public float openSpeed = 2f; // How fast it opens/closes
+    public Transform player;
+    public float openDistance = 3f;
+    public float openAngle = 90f;
+    public float openSpeed = 2f;
 
     private Quaternion closedRotation;
     private Quaternion openRotation;
@@ -24,7 +24,6 @@ public class AutomaticDoor : MonoBehaviour
 
         if (distance < openDistance && !isOpen)
         {
-            // Open door smoothly
             transform.rotation = Quaternion.Slerp(
                 transform.rotation,
                 openRotation,
@@ -38,7 +37,6 @@ public class AutomaticDoor : MonoBehaviour
         }
         else if (distance >= openDistance && isOpen)
         {
-            // Close door smoothly
             transform.rotation = Quaternion.Slerp(
                 transform.rotation,
                 closedRotation,
@@ -50,12 +48,5 @@ public class AutomaticDoor : MonoBehaviour
                 isOpen = false;
             }
         }
-    }
-
-    // Debug visualization
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, openDistance);
     }
 }

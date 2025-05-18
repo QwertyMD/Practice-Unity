@@ -19,7 +19,7 @@ public class MainMenuController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        SceneManager.LoadScene("Zoo"); // Replace with your Zoo scene name
+        SceneManager.LoadScene("Zoo");
     }
     
     public void PlayQuiz()

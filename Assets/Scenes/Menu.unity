@@ -2472,7 +2472,7 @@ GameObject:
   - component: {fileID: 1811962210}
   - component: {fileID: 1811962209}
   m_Layer: 0
-  m_Name: youtube_f-xI1vHq7OM_audio
+  m_Name: music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

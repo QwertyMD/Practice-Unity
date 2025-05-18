@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class AnimalMovement : MonoBehaviour
 {
-    public float speed = 2f;          // Speed of the horse
-    public float rectangleWidth = 10f; // Width of the rectangle (X-axis)
-    public float rectangleHeight = 5f; // Height of the rectangle (Z-axis)
+    public float speed = 2f;
+    public float rectangleWidth = 10f;
+    public float rectangleHeight = 5f;
 
-    private Vector3 centerPosition;   // Center of the rectangle
-    private Vector3 targetPosition;   // Where the horse is moving to
+    private Vector3 centerPosition;
+    private Vector3 targetPosition;
 
     void Start()
     {
-        // Use the horse's initial position as the center of the rectangle
         centerPosition = transform.position;
         PickNewTarget();
     }
@@ -23,10 +22,8 @@ public class AnimalMovement : MonoBehaviour
 
     void MoveWithinRectangle()
     {
-        // Move toward the target position
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
-        // Look toward the target (only on X-Z plane)
         Vector3 direction = (targetPosition - transform.position).normalized;
         if (direction != Vector3.zero)
         {
@@ -34,7 +31,6 @@ public class AnimalMovement : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(lookDirection);
         }
 
-        // If close to the target, pick a new random target
         if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
         {
             PickNewTarget();
